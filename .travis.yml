@@ -127,7 +127,5 @@ after_failure:
 
 
 notifications:
-  email:
-    - penkov+gensimwheels@pm.me
   on_success: always
   on_failure: always
