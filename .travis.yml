@@ -41,6 +41,44 @@ jobs:
       - PLAT=x86_64
       - SKIP_NETWORK_TESTS=1
 
+  - os: linux
+    arch: arm64-graviton2
+    dist: focal
+    virt: vm
+    group: edge
+    env:
+      - BUILD_DEPENDS="numpy==1.19.2 scipy==1.5.3"
+      - MB_PYTHON_VERSION=3.6
+      - PLAT=aarch64
+      - MB_ML_VER=2014
+      - SKIP_NETWORK_TESTS=1
+      - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+
+  - os: linux
+    arch: arm64-graviton2
+    dist: focal
+    virt: vm
+    group: edge
+    env:
+      - BUILD_DEPENDS="numpy==1.19.2 scipy==1.5.3"
+      - MB_PYTHON_VERSION=3.7
+      - PLAT=aarch64
+      - MB_ML_VER=2014
+      - SKIP_NETWORK_TESTS=1
+      - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+
+  - os: linux
+    arch: arm64-graviton2
+    dist: focal
+    virt: vm
+    group: edge
+    env:
+      - BUILD_DEPENDS="numpy==1.19.2 scipy==1.5.3"
+      - MB_PYTHON_VERSION=3.8
+      - PLAT=aarch64
+      - MB_ML_VER=2014
+      - SKIP_NETWORK_TESTS=1
+      - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
 
   # MacOS
   - os: osx
